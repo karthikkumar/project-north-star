@@ -23,7 +23,10 @@ export default function Home() {
         </div>
 
         <div className={styles.message}>
-          <Typography variant="h4" sx={{ fontWeight: "700" }}>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "700", textAlign: "center" }}
+          >
             Chart your career path with confidence
           </Typography>
           <Typography variant="h6" sx={{ textAlign: "center" }}>

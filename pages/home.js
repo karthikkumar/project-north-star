@@ -100,6 +100,52 @@ export default function Home() {
                 >
                   <Typography>Mentors</Typography>
                 </AccordionSummary>
+                <AccordionDetails
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href="https://in.linkedin.com/in/data-scientist-95040a1ab"
+                        target="_blank"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Krisztina Peter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://in.linkedin.com/in/data-scientist-6616b616b"
+                        target="_blank"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Mayur Rindhe
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://ca.linkedin.com/in/data-scientist-9659071a7"
+                        target="_blank"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Scyarunya Pidikiti
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://ca.linkedin.com/in/data-scientist-2271391b8"
+                        target="_blank"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Priyanshi Singh
+                      </a>
+                    </li>
+                  </ul>
+                </AccordionDetails>
               </Accordion>
             </Paper>
           </div>

@@ -74,6 +74,8 @@ export default function TreeDiagram() {
   return (
     <>
       <Tree
+        translate={{ x: 50, y: 300 }}
+        scaleExtent={{ min: 0.5, max: 2 }}
         data={orgChart}
         rootNodeClassName={styles.rootNode}
         branchNodeClassName={styles.branchNode}

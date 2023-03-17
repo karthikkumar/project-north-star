@@ -1,0 +1,17 @@
+.rootNode > circle {
+  r: 20;
+}
+
+.branchNode > circle {
+  r: 10;
+}
+
+.leafNode > circle {
+  r: 5;
+}
+
+.popover {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}

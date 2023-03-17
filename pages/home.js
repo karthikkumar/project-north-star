@@ -1,5 +1,6 @@
 import { Box, Paper, Typography } from "@mui/material";
 import Filters from "../components/Filters";
+import TreeDiagram from "../components/TreeDiagram";
 
 export default function Home() {
   return (
@@ -27,7 +28,9 @@ export default function Home() {
           height: "100%",
           padding: "1rem",
         }}
-      ></Paper>
+      >
+        <TreeDiagram />
+      </Paper>
     </Box>
   );
 }

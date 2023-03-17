@@ -110,11 +110,11 @@ export default function Home() {
                   <ul>
                     <li>
                       <a
-                        href="https://in.linkedin.com/in/data-scientist-95040a1ab"
+                        href="https://www.linkedin.com/in/benjamin-rollins-bbb2a872"
                         target="_blank"
                         style={{ textDecoration: "underline" }}
                       >
-                        Krisztina Peter
+                        Benjamin Rollins
                       </a>
                     </li>
                     <li>
@@ -123,7 +123,7 @@ export default function Home() {
                         target="_blank"
                         style={{ textDecoration: "underline" }}
                       >
-                        Mayur Rindhe
+                        Hossein Zahed
                       </a>
                     </li>
                     <li>
@@ -132,7 +132,7 @@ export default function Home() {
                         target="_blank"
                         style={{ textDecoration: "underline" }}
                       >
-                        Scyarunya Pidikiti
+                        Victor Grazon
                       </a>
                     </li>
                     <li>
@@ -141,9 +141,58 @@ export default function Home() {
                         target="_blank"
                         style={{ textDecoration: "underline" }}
                       >
-                        Priyanshi Singh
+                        Lok Yi Lam
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/brianballer"
+                        target="_blank"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Brian Baller
+                      </a>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography>Universities</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul>
+                    <li>University of California Berkeley</li>
+                    <li>Massachusetts Institute of Technology</li>
+                    <li>Carnegie Mellon University</li>
+                    <li>Georgia Institute of Technology</li>
+                    <li>Stanford University</li>
+                    <li>University of Washington</li>
+                    <li>Cornell University</li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography>Top employers</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul>
+                    <li>Google</li>
+                    <li>Facebook</li>
+                    <li>Amazon</li>
+                    <li>Microsoft</li>
+                    <li>Apple</li>
+                    <li>IBM</li>
+                    <li>Oracle</li>
                   </ul>
                 </AccordionDetails>
               </Accordion>

@@ -11,7 +11,7 @@ export default function Home() {
         <div className={styles.titleAndLogo}>
           <div className={styles.title}>
             <span className={styles.titlePrefix}>Project</span>
-            <h1 className={styles.title}>north star</h1>
+            <h1 className={styles.title}>North Star</h1>
           </div>
           <Image
             src="/images/star.svg"
@@ -35,6 +35,13 @@ export default function Home() {
             tailored to your ambition, interests and skills.
           </Typography>
         </div>
+        <Image
+          src="/images/banner.png"
+          alt="logo"
+          width={800}
+          height={500}
+          className={styles.banner}
+        />
 
         <div className={styles.grid}>
           <Link href="/onboard" className={styles.card}>
@@ -107,7 +114,7 @@ export default function Home() {
         <Paper
           elevation={1}
           sx={{
-            backgroundColor: "#903BF8",
+            backgroundColor: "#72ADAD",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",

@@ -45,7 +45,7 @@ const renderCustomNode = ({
           nodeDatum.children ? "60" : Math.max(nodeDatum.name?.length * 3.5, 25)
         }
         dy={nodeDatum.children ? "25" : "5"}
-        fill={isSelected ? "#903BF8" : "#000"}
+        fill={isSelected ? "#72ADAD" : "#000"}
         strokeWidth={0}
       >
         {nodeDatum.name}

@@ -39,7 +39,6 @@
   align-items: flex-start;
   justify-content: center;
   color: var(--color-primary);
-  font-style: italic;
 }
 
 .title,
@@ -134,4 +133,8 @@
   gap: 1rem;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.banner {
+  margin-top: 2rem;
 }

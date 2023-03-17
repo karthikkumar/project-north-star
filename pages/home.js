@@ -1,8 +1,14 @@
 import { Box, Paper, Typography } from "@mui/material";
 import Filters from "../components/Filters";
 import TreeDiagram from "../components/TreeDiagram";
+import { useStateContext } from "../state";
 
 export default function Home() {
+  const { userInputs } = useStateContext();
+  const jobTitle = userInputs["job-title"]?.value;
+  const courseTitle = userInputs["course-title"]?.value;
+  const university = userInputs["university"]?.value;
+
   return (
     <Box
       sx={{
@@ -29,7 +35,11 @@ export default function Home() {
           padding: "1rem",
         }}
       >
-        <TreeDiagram />
+        <TreeDiagram
+          jobTitle={jobTitle}
+          courseTitle={courseTitle}
+          university={university}
+        />
       </Paper>
     </Box>
   );

@@ -1,0 +1,40 @@
+{
+  "name": "Data Scientist",
+  "children": [
+    {
+      "name": "AI/ML Engineer",
+      "children": [
+        {
+          "name": "Senior Data Scientist",
+          "children": [
+            {
+              "name": "Principal Data Scientist"
+            },
+            {
+              "name": "Data Science Director"
+            },
+            {
+              "name": "Data Science Solutions Architect"
+            }
+          ]
+        },
+        {
+          "name": "Data Science Manager",
+          "children": [
+            {
+              "name": "Engineering Director",
+              "children": [
+                {
+                  "name": "VP Engineering"
+                },
+                {
+                  "name": "CTO"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

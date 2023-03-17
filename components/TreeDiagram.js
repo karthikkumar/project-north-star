@@ -1,100 +1,105 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tree from "react-d3-tree";
 
 import styles from "../styles/TreeDiagram.module.css";
+import { useStateContext } from "../state";
 
-const orgChart = {
-  name: "CEO",
-  children: [
-    {
-      name: "Manager",
-      attributes: {
-        department: "Production",
-      },
-      children: [
-        {
-          name: "Foreman",
-          attributes: {
-            department: "Fabrication",
-          },
-          children: [
-            {
-              name: "Worker",
-            },
-          ],
-        },
-        {
-          name: "Foreman",
-          attributes: {
-            department: "Assembly",
-          },
-          children: [
-            {
-              name: "Worker",
-            },
-          ],
-        },
-      ],
-    },
-  ],
+// const renderForeignObjectNode = ({
+//   nodeDatum,
+//   onNodeLabelClick,
+//   foreignObjectProps,
+// }) => (
+//   <g>
+//     <circle r={nodeDatum.children ? 10 : 5}></circle>
+//     <foreignObject {...foreignObjectProps}>
+//       <div
+//         style={{ top: nodeDatum.children ? 10 : 100 }}
+//         onClick={() => onNodeLabelClick(nodeDatum)}
+//       >
+//         <p
+//           style={{ textAlign: "center", fontSize: "1.2rem", fontWeight: "500" }}
+//         >
+//           {nodeDatum.name}
+//         </p>
+//       </div>
+//     </foreignObject>
+//   </g>
+// );
+
+const renderCustomNode = ({
+  nodeDatum,
+  toggleNode,
+  selectedNode,
+  onNodeLabelClick,
+}) => {
+  const isSelected = selectedNode?.name === nodeDatum.name;
+  return (
+    <>
+      <circle r={nodeDatum.children ? 10 : 5} onClick={toggleNode}></circle>
+      <text
+        onClick={() => onNodeLabelClick(nodeDatum)}
+        textAnchor="middle"
+        fontSize={isSelected ? "14" : "12"}
+        fontWeight={isSelected ? "700" : "400"}
+        dx={
+          nodeDatum.children ? "60" : Math.max(nodeDatum.name?.length * 3.5, 25)
+        }
+        dy={nodeDatum.children ? "25" : "5"}
+        fill={isSelected ? "#903BF8" : "#000"}
+        strokeWidth={0}
+      >
+        {nodeDatum.name}
+      </text>
+    </>
+  );
 };
 
-function NodeLabel({ nodeData }) {
-  return (
-    <div className="nodeLabel" onClick={() => console.log({ nodeData })}>
-      <p>{nodeData.name}</p>
-    </div>
-  );
-}
+export default function TreeDiagram({ jobTitle, courseTitle, university }) {
+  const [data, setData] = useState();
+  const { selectedNode, setSelectedNode } = useStateContext();
 
-export default function TreeDiagram() {
-  const [node, setNode] = useState(null);
+  useEffect(() => {
+    console.log({ jobTitle });
+    if (jobTitle || courseTitle || university) {
+      const fileName = (jobTitle || courseTitle || university)
+        .toLowerCase()
+        .replace(" ", "-");
+      import(`../data/${fileName}.json`).then((data) => {
+        console.log({ data });
+        setData(data);
+      });
+    }
+  }, [jobTitle, courseTitle, university]);
 
-  const handleNodeClick = (_, nodeData) => {
-    setNode(nodeData);
+  const handleNodeLabelClick = (nodeData) => {
+    if (nodeData.name === selectedNode?.name) {
+      setSelectedNode({});
+    } else {
+      setSelectedNode(nodeData);
+    }
   };
 
-  const handleCloseClick = () => {
-    setNode(null);
-  };
-
-  const renderPopover = () => {
-    if (!node) return null;
-
-    const { x, y } = node;
-    return (
-      <div className={styles.popover} style={{ top: y + "px", left: x + "px" }}>
-        <h3>{node.name}</h3>
-        <p>{node.description}</p>
-        <button onClick={handleCloseClick}>Close</button>
-      </div>
-    );
-  };
+  if (!jobTitle || !data) {
+    return null;
+  }
 
   return (
     <>
       <Tree
-        translate={{ x: 50, y: 300 }}
+        translate={{ x: 300, y: 300 }}
         scaleExtent={{ min: 0.5, max: 2 }}
-        data={orgChart}
+        data={data}
         rootNodeClassName={styles.rootNode}
         branchNodeClassName={styles.branchNode}
         leafNodeClassName={styles.leafNode}
-        onClick={handleNodeClick}
-        nodeLabelComponent={{
-          render: <NodeLabel />,
-          foreignObjectWrapper: {
-            x: -50,
-            y: -15,
-            width: 100,
-            height: 30,
-            style: {
-              pointerEvents: "none",
-            },
-          },
-        }}
+        renderCustomNodeElement={(rd3tProps) =>
+          renderCustomNode({
+            ...rd3tProps,
+            selectedNode,
+            onNodeLabelClick: handleNodeLabelClick,
+          })
+        }
       />
-      {renderPopover()}
     </>
   );
 }

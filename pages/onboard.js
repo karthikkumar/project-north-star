@@ -1,6 +1,6 @@
-import { Box, Container, Button, TextField, Typography } from "@mui/material";
+import { Box, Container, Button, Typography } from "@mui/material";
 import Field from "../components/Field";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useStateContext } from "../state";
 import { useRouter } from "next/router";
 import {
@@ -41,14 +41,12 @@ export default function Onboard() {
             options={JobTitleOptions}
             label="Job title"
             control={control}
-            important
           />
           <Field
             name="course-title"
             options={CourseTitleOptions}
             label="Degree / course title"
             control={control}
-            important
           />
           <Field
             name="skills"
@@ -56,23 +54,20 @@ export default function Onboard() {
             label="Skills"
             control={control}
             multiple
-            important
           />
           <Field
             name="university"
             options={UniversityOptions}
             label="University"
             control={control}
-            important
           />
           <Field
             name="geography"
             options={GeographyOptions}
             label="Geography"
             control={control}
-            important
           />
-          <Controller
+          {/* <Controller
             name="email"
             control={control}
             render={({ field: { onChange } }) => (
@@ -84,7 +79,7 @@ export default function Onboard() {
                 onChange={onChange}
               />
             )}
-          />
+          /> */}
           <br />
           <Button
             type="submit"
@@ -92,10 +87,11 @@ export default function Onboard() {
             sx={{
               width: "max-content",
               marginTop: "1rem",
+              textTransform: "none",
             }}
             onClick={handleSubmit(onSubmit)}
           >
-            Submit
+            Login with LinkedIn
           </Button>
         </form>
       </Container>

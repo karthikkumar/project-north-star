@@ -1,0 +1,75 @@
+{
+  "name": "Software Engineer",
+  "children": [
+    {
+      "name": "Cloud Engineer",
+      "children": [
+        {
+          "name": "Senior Cloud Engineer",
+          "children": [
+            {
+              "name": "Principal Cloud Engineer"
+            },
+            {
+              "name": "Solutions Architect"
+            },
+            {
+              "name": "Machine Learning Engineer"
+            }
+          ]
+        },
+        {
+          "name": "Data Engineering",
+          "children": [
+            {
+              "name": "Engineering Manager",
+              "children": [
+                {
+                  "name": "Engineering Director"
+                },
+                {
+                  "name": "CTO"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DevOps Engineer",
+      "children": [
+        {
+          "name": "Senior Cloud Engineer",
+          "children": [
+            {
+              "name": "Principal Data Scientist"
+            },
+            {
+              "name": "Data Science Director"
+            },
+            {
+              "name": "Data Science Solutions Architect"
+            }
+          ]
+        },
+        {
+          "name": "Data Science Manager",
+          "children": [
+            {
+              "name": "Engineering Director",
+              "children": [
+                {
+                  "name": "VP Engineering"
+                },
+                {
+                  "name": "CTO"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

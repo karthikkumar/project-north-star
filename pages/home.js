@@ -1,10 +1,21 @@
-import { Box, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Chip,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Filters from "../components/Filters";
 import TreeDiagram from "../components/TreeDiagram";
 import { useStateContext } from "../state";
 
+import styles from "../styles/Home.module.css";
+
 export default function Home() {
-  const { userInputs } = useStateContext();
+  const { userInputs, selectedNode } = useStateContext();
   const jobTitle = userInputs["job-title"]?.value;
   const courseTitle = userInputs["course-title"]?.value;
   const university = userInputs["university"]?.value;
@@ -27,20 +38,73 @@ export default function Home() {
         </Typography>
         <Filters />
       </div>
-      <Paper
-        elevation={1}
-        sx={{
-          backgroundColor: "#f0f0f0",
-          height: "100%",
-          padding: "1rem",
-        }}
-      >
-        <TreeDiagram
-          jobTitle={jobTitle}
-          courseTitle={courseTitle}
-          university={university}
-        />
-      </Paper>
+      <div className={styles.canvasAndDetails}>
+        <Paper
+          elevation={1}
+          sx={{
+            backgroundColor: "#f0f0f0",
+            height: "100%",
+            padding: "1rem",
+          }}
+        >
+          <TreeDiagram
+            jobTitle={jobTitle}
+            courseTitle={courseTitle}
+            university={university}
+          />
+        </Paper>
+        {selectedNode?.name && (
+          <div className={styles.details}>
+            <Paper elevation={1} sx={{ width: "100%", height: "100%" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontWeight: "600", padding: "1rem" }}
+              >
+                {selectedNode?.name}
+              </Typography>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Skills</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className={styles.skillTags}>
+                    <Chip label="SQL" />
+                    <Chip label="Python" />
+                    <Chip label="Power BI" />
+                    <Chip label="Apache Kafka" />
+                    <Chip label="TensorFlow" />
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography>Salary range</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>$50K - $100K</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel3a-content"
+                  id="panel3a-header"
+                >
+                  <Typography>Mentors</Typography>
+                </AccordionSummary>
+              </Accordion>
+            </Paper>
+          </div>
+        )}
+      </div>
     </Box>
   );
 }

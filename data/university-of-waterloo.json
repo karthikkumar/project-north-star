@@ -1,0 +1,40 @@
+{
+  "name": "University of Waterloo",
+  "children": [
+    {
+      "name": "Master of Statistics",
+      "children": [
+        {
+          "name": "Senior Data Scientist",
+          "children": [
+            {
+              "name": "Principal Data Scientist"
+            },
+            {
+              "name": "Data Science Director"
+            },
+            {
+              "name": "Data Science Solutions Architect"
+            }
+          ]
+        },
+        {
+          "name": "Data Science Manager",
+          "children": [
+            {
+              "name": "Engineering Director",
+              "children": [
+                {
+                  "name": "VP Engineering"
+                },
+                {
+                  "name": "CTO"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

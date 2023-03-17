@@ -35,11 +35,11 @@ const renderCustomNode = ({
   const isSelected = selectedNode?.name === nodeDatum.name;
   return (
     <>
-      <circle r={nodeDatum.children ? 10 : 5} onClick={toggleNode}></circle>
+      <circle onClick={toggleNode}></circle>
       <text
         onClick={() => onNodeLabelClick(nodeDatum)}
         textAnchor="middle"
-        fontSize={isSelected ? "14" : "12"}
+        fontSize={isSelected ? "12" : "12"}
         fontWeight={isSelected ? "700" : "400"}
         dx={
           nodeDatum.children ? "60" : Math.max(nodeDatum.name?.length * 3.5, 25)
@@ -59,13 +59,11 @@ export default function TreeDiagram({ jobTitle, courseTitle, university }) {
   const { selectedNode, setSelectedNode } = useStateContext();
 
   useEffect(() => {
-    console.log({ jobTitle });
     if (jobTitle || courseTitle || university) {
       const fileName = (jobTitle || courseTitle || university)
         .toLowerCase()
-        .replace(" ", "-");
+        .replaceAll(" ", "-");
       import(`../data/${fileName}.json`).then((data) => {
-        console.log({ data });
         setData(data);
       });
     }
@@ -79,7 +77,7 @@ export default function TreeDiagram({ jobTitle, courseTitle, university }) {
     }
   };
 
-  if (!jobTitle || !data) {
+  if (!data) {
     return null;
   }
 
@@ -89,6 +87,7 @@ export default function TreeDiagram({ jobTitle, courseTitle, university }) {
         translate={{ x: 300, y: 300 }}
         scaleExtent={{ min: 0.5, max: 2 }}
         data={data}
+        initialDepth={1}
         rootNodeClassName={styles.rootNode}
         branchNodeClassName={styles.branchNode}
         leafNodeClassName={styles.leafNode}

@@ -16,6 +16,7 @@ export default function Filters() {
   const { handleSubmit, control } = useForm();
   const { userInputs, setUserInputs } = useStateContext();
   const onSubmit = (data) => {
+    console.log({ data });
     setUserInputs(data);
   };
   return (

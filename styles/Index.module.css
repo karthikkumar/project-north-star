@@ -33,7 +33,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -67,7 +67,6 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
-  margin-top: 1rem;
 }
 
 .card {

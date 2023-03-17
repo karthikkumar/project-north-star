@@ -16,8 +16,8 @@ export default function Home() {
           <Image
             src="/images/star.svg"
             alt="logo"
-            width={64}
-            height={64}
+            width={56}
+            height={56}
             className={styles.logo}
           />
         </div>

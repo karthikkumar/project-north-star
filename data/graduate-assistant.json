@@ -10,10 +10,10 @@
             {
               "name": "Senior Data Science Engineer",
               "children": [
-                  {
-                    "name": "Data Science Manager"
-                  }
-                ]
+                {
+                  "name": "Data Science Manager"
+                }
+              ]
             },
             {
               "name": "Data Science Manager"
@@ -27,7 +27,35 @@
               "name": "Software Engineer",
               "children": [
                 {
-                  "name": "Team Lead - Data Science"
+                  "name": "Team Lead - Data Science",
+                  "skills": [
+                    "Python",
+                    "Airflow",
+                    "Kubeflow",
+                    "TensorFlow",
+                    "Apache Spark",
+                    "Hadoop",
+                    "Jupyter"
+                  ],
+                  "salary-range": "$84K - $225K",
+                  "mentors": [
+                    {
+                      "name": "Stuart Layton",
+                      "linkedIn": "https://linkedin.com/in/stuart-layton-5943567/"
+                    },
+                    {
+                      "name": "Dana Rosenfarb",
+                      "linkedIn": "https://www.linkedin.com/in/dana-rosenfarb/"
+                    },
+                    {
+                      "name": "David Wu",
+                      "linkedIn": "https://www.linkedin.com/in/david-wu-100466113/"
+                    },
+                    {
+                      "name": "Sam O. Karkach",
+                      "linkedIn": "https://www.linkedin.com/in/sam-karkach/"
+                    }
+                  ]
                 }
               ]
             }

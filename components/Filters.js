@@ -55,7 +55,7 @@ export default function Filters() {
         options={GeographyOptions}
         label="Geography"
         control={control}
-        defaultValue={userInputs["geography"]?.value}
+        defaultValue={userInputs["geography"]?.value || "Unites States"}
       />
       <Button
         type="submit"

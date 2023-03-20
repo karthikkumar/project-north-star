@@ -1,0 +1,39 @@
+{
+  "name": "Graduate Assistant",
+  "children": [
+    {
+      "name": "Research Engineer",
+      "children": [
+        {
+          "name": "Data Science/Machine Learning Engineer",
+          "children": [
+            {
+              "name": "Senior Data Science Engineer",
+              "children": [
+                  {
+                    "name": "Data Science Manager"
+                  }
+                ]
+            },
+            {
+              "name": "Data Science Manager"
+            }
+          ]
+        },
+        {
+          "name": "Junior Software Engineer",
+          "children": [
+            {
+              "name": "Software Engineer",
+              "children": [
+                {
+                  "name": "Team Lead - Data Science"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

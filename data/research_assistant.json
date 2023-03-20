@@ -1,0 +1,48 @@
+{
+  "name": "Research Assistant",
+  "children": [
+    {
+      "name": "Senior Consultant",
+      "children": [
+        {
+          "name": "Senior Applications Developer",
+          "children": [
+            {
+              "name": "Senior Global Risk Management Specialist",
+              "children": [
+                  {
+                    "name": "Head - Commodities Data Engineering"
+                  }
+                ]
+            },
+            {
+              "name": "Data Science Manager"
+            },
+            {
+              "name": "Data Science Solutions Architect"
+            }
+          ]
+        },
+        {
+          "name": "Data Science Manager",
+          "children": [
+            {
+              "name": "Director of Engineering",
+              "children": [
+                {
+                  "name": "VP Engineering"
+                },
+                {
+                  "name": "Data Science Director"
+                },
+                {
+                  "name": "CTO"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

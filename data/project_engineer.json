@@ -1,0 +1,52 @@
+{
+  "name": "Project Engineer",
+  "children": [
+    {
+      "name": "Senior Software Engineer",
+      "children": [
+        {
+          "name": "Lead Developer",
+          "children": [
+            {
+              "name": "Data Architect",
+              "children": [
+                  {
+                    "name": "Data Engineering Manager",
+                    "children": [
+                      {
+                        "name": "Senior Data Engineering Manager",
+                        "children": [
+                          {
+                            "name": "VP of Engineering"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+            },
+            {
+              "name": "Data Engineering Manager"
+            },
+            {
+              "name": "Data Science Solutions Architect"
+            }
+          ]
+        },
+        {
+          "name": "Systems Engineer",
+          "children": [
+            {
+              "name": "Data Engineer",
+              "children": [
+                {
+                  "name": "Senior Data Engineer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

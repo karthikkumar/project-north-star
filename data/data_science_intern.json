@@ -1,0 +1,46 @@
+{
+  "name": "Data Science Intern",
+  "children": [
+    {
+      "name": "Computational BIM Tutor",
+      "children": [
+        {
+          "name": "Computational BIM Specialist",
+          "children": [
+            {
+              "name": "Design Technology Specialist",
+              "children": [
+                  {
+                    "name": "Data Scientist",
+                    "children": [
+                      {
+                        "name": "Founder and R&D Director"
+                      }
+                    ]
+                  }
+                ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Scientist",
+      "children": [
+        {
+          "name": "Senior Data Scientist",
+          "children": [
+            {
+              "name": "Chief Data Scientist",
+              "children": [
+                {
+                  "name": "Chief Data Officer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

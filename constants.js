@@ -199,3 +199,59 @@ export const GeographyOptions = [
   "Moldova",
   "Turkey",
 ];
+
+// Defaults
+
+export const Defaults = {
+  skills: ["SQL", "Python", "Power BI", "Apache Kafka", "TensorFlow"],
+  salaryRange: "$50K - $100K",
+  mentors: [
+    {
+      name: "Benjamin Rollins",
+      linkedIn: "https://www.linkedin.com/in/benjamin-rollins-bbb2a872",
+    },
+    {
+      name: "Hossein Zahed",
+      linkedIn: "https://in.linkedin.com/in/data-scientist-6616b616b",
+    },
+    {
+      name: "Victor Grazon",
+      linkedIn: "https://ca.linkedin.com/in/data-scientist-9659071a7",
+    },
+    {
+      name: "Lok Yi Lam",
+      linkedIn: "https://ca.linkedin.com/in/data-scientist-2271391b8",
+    },
+    {
+      name: "Brian Baller",
+      linkedIn: "https://www.linkedin.com/in/brianballer",
+    },
+    {
+      name: "Siddharth Kulkarni",
+      linkedIn: "https://www.linkedin.com/in/siddharth-kulkarni-5b4b2b1b",
+    },
+  ],
+  universities: [
+    "University of California Berkeley",
+    "Massachusetts Institute of Technology",
+    "University of Toronto",
+    "Carnegie Mellon University",
+    "Georgia Institute of Technology",
+    "University of California Los Angeles",
+    "University of Washington",
+    "University of Illinois at Urbana-Champaign",
+    "University of Michigan",
+    "University of California San Diego",
+  ],
+  employers: [
+    "Google",
+    "Microsoft",
+    "Oracle",
+    "IBM",
+    "Intel",
+    "Cisco",
+    "Adobe",
+    "Salesforce",
+    "VMware",
+  ],
+};

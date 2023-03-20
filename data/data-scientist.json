@@ -21,7 +21,7 @@
         {
           "name": "Data Science Manager",
           "skills": ["Python", "TensorFlow", "H20.ai", "HuggingFace"],
-          "salary-range": "$125K - $260K",
+          "salaryRange": "$125K - $260K",
           "mentors": [
             {
               "name": "Victor Garzon",

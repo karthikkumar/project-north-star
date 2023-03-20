@@ -11,6 +11,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Filters from "../components/Filters";
 import TreeDiagram from "../components/TreeDiagram";
 import { useStateContext } from "../state";
+import { Defaults } from "../constants";
 
 import styles from "../styles/Home.module.css";
 
@@ -72,11 +73,9 @@ export default function Home() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <div className={styles.skillTags}>
-                    <Chip label="SQL" />
-                    <Chip label="Python" />
-                    <Chip label="Power BI" />
-                    <Chip label="Apache Kafka" />
-                    <Chip label="TensorFlow" />
+                    {(selectedNode?.skills || Defaults.skills).map((skill) => (
+                      <Chip label={skill} key={skill} />
+                    ))}
                   </div>
                 </AccordionDetails>
               </Accordion>
@@ -89,7 +88,9 @@ export default function Home() {
                   <Typography>Salary range</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>$50K - $100K</Typography>
+                  <Typography>
+                    {selectedNode?.salaryRange || Defaults.salaryRange}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -108,51 +109,21 @@ export default function Home() {
                   }}
                 >
                   <ul>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/benjamin-rollins-bbb2a872"
-                        target="_blank"
-                        style={{ textDecoration: "underline" }}
-                      >
-                        Benjamin Rollins
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://in.linkedin.com/in/data-scientist-6616b616b"
-                        target="_blank"
-                        style={{ textDecoration: "underline" }}
-                      >
-                        Hossein Zahed
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://ca.linkedin.com/in/data-scientist-9659071a7"
-                        target="_blank"
-                        style={{ textDecoration: "underline" }}
-                      >
-                        Victor Grazon
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://ca.linkedin.com/in/data-scientist-2271391b8"
-                        target="_blank"
-                        style={{ textDecoration: "underline" }}
-                      >
-                        Lok Yi Lam
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/brianballer"
-                        target="_blank"
-                        style={{ textDecoration: "underline" }}
-                      >
-                        Brian Baller
-                      </a>
-                    </li>
+                    {(selectedNode?.mentors || Defaults.mentors)?.map(
+                      ({ name, linkedIn }) => {
+                        return (
+                          <li key={name + "-" + linkedIn}>
+                            <a
+                              href={linkedIn}
+                              target="_blank"
+                              style={{ textDecoration: "underline" }}
+                            >
+                              {name}
+                            </a>
+                          </li>
+                        );
+                      }
+                    )}
                   </ul>
                 </AccordionDetails>
               </Accordion>
@@ -166,13 +137,11 @@ export default function Home() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <ul>
-                    <li>University of California Berkeley</li>
-                    <li>Massachusetts Institute of Technology</li>
-                    <li>Carnegie Mellon University</li>
-                    <li>Georgia Institute of Technology</li>
-                    <li>Stanford University</li>
-                    <li>University of Washington</li>
-                    <li>Cornell University</li>
+                    {(selectedNode?.universities || Defaults.universities).map(
+                      (university) => (
+                        <li key={university}>{university}</li>
+                      )
+                    )}
                   </ul>
                 </AccordionDetails>
               </Accordion>
@@ -186,13 +155,11 @@ export default function Home() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <ul>
-                    <li>Google</li>
-                    <li>Facebook</li>
-                    <li>Amazon</li>
-                    <li>Microsoft</li>
-                    <li>Apple</li>
-                    <li>IBM</li>
-                    <li>Oracle</li>
+                    {(selectedNode?.employers || Defaults.employers).map(
+                      (employer) => (
+                        <li key={employer}>{employer}</li>
+                      )
+                    )}
                   </ul>
                 </AccordionDetails>
               </Accordion>

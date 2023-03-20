@@ -37,7 +37,7 @@
                     "Hadoop",
                     "Jupyter"
                   ],
-                  "salary-range": "$84K - $225K",
+                  "salaryRange": "$84K - $225K",
                   "mentors": [
                     {
                       "name": "Stuart Layton",

@@ -73,6 +73,7 @@ export default function TreeDiagram({ jobTitle, courseTitle, university }) {
     if (nodeData.name === selectedNode?.name) {
       setSelectedNode({});
     } else {
+      console.log({ nodeData });
       setSelectedNode(nodeData);
     }
   };

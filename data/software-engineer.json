@@ -55,6 +55,26 @@
         },
         {
           "name": "Data Science Manager",
+          "skills": ["Python", "TensorFlow", "H20.ai", "HuggingFace"],
+          "salaryRange": "$125K - $260K",
+          "mentors": [
+            {
+              "name": "Victor Garzon",
+              "linkedIn": "https://www.linkedin.com/in/vgarzon/"
+            },
+            {
+              "name": "Mukarram Tahir",
+              "linkedIn": "https://www.linkedin.com/in/mukarram-tahir-a7287a9a/"
+            },
+            {
+              "name": "Vikram Verma",
+              "linkedIn": "https://www.linkedin.com/in/vikramsverma/"
+            },
+            {
+              "name": "Inessa Liskovich",
+              "linkedIn": "https://www.linkedin.com/in/inessaliskovich/"
+            }
+          ],
           "children": [
             {
               "name": "Engineering Director",
